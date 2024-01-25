@@ -19,6 +19,25 @@
 	background-color: #333;
 	background-image: url("images/wood.jpg");
 	background-size: 70%;
+	gap: 20px;
+}
+.card {
+	
+	background: rgba(255, 255, 255, 0.06);
+	justify-content:center;
+	padding-left: 20px;
+	align-items: center;
+	width: 100%;
+	max-width: 500px;
+	min-height: 300px;
+	display: flex;
+	flex-direction: row;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
 }
 
 .calculator {
@@ -143,4 +162,12 @@
 
 .keys .key.action span {
 	color: #E42C64;
+}
+
+h4{
+	font-size: 30px;
+	text-align: center;
+	box-shadow:#333;
+
+
 }
