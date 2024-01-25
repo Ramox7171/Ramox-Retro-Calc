@@ -75,7 +75,7 @@ function ValidateInput (value) {
 	return true;
 }
 
-function PerpareInput (input) {
+function PrepareInput (input) {
 	let inputArray = input.split("");
 
 	for (let i = 0; i < inputArray.length; i++) {
@@ -101,7 +101,7 @@ for (let key of keys) {
 			input = input.slice(0, -1);
 			displayInput.innerHTML = CleanInput(input);
 		} else if (value === "=") {
-			let result = eval(PerpareInput(input));
+			let result = eval(PrepareInput(input));
 
 			displayOutput.innerHTML = CleanOutput(result);
 
@@ -122,7 +122,7 @@ for (let key of keys) {
 
 			} else if (
 				input.indexOf("(") != -1 && input.indexOf(")") === -1 || input.indexOf("(") != -1 && input.indexOf(")") != -1 && input.lastIndexOf("(") > input.lastIndexOf(")")) {
-					
+
 				input += ")";
 			}
 

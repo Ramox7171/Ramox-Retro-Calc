@@ -4,7 +4,11 @@
 	box-sizing: border-box;
 	font-family: 'Orbitron';
 	
+	
 }
+
+
+	
 
 
 .app {
@@ -13,17 +17,23 @@
 	align-items: center;
 	height: 100vh;
 	background-color: #333;
+	background-image: url("images/wood.jpg");
+	background-size: 70%;
 }
 
 .calculator {
-	background-color: #614AD3;
+	background: rgba(255, 255, 255, 0.06);
 	width: 100%;
 	max-width: 375px;
 	min-height: 640px;
 	display: flex;
 	flex-direction: column;
-	border-radius: 20px;
+	border-radius: 16px;
 	overflow: hidden;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
 }
 
 .display {
@@ -38,6 +48,7 @@
 }
 
 .display .content {
+	border: 5px solid;
 	border-radius: 20px;
 	padding-bottom: 20px;
     background-color: #0ff;
@@ -48,6 +59,7 @@
 	width: 100%;
 	max-width: 100%;
 	overflow: auto;
+	box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.8);
 }
 
 .display .input {
@@ -77,14 +89,19 @@
 }
 
 .keys {
-	background-color: #614AD3;
+	background: rgba(255, 255, 255, 0.06);
 	padding: 20px;
-	border-radius: 20px 20px 0px 0px;
+	border-radius: 16px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	gap: 5px;
-	box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(233, 233, 233, 0.3);
+	border:2px solid rgb(110, 110, 110);
+	
+
 }
 
 .keys .key {
@@ -95,10 +112,14 @@
 	border: 1px solid;
 	height: 0;
 	padding-top: 100%;
-	background-color: #4b39a5;
-	border-radius: px;
+	background: rgba(233, 233, 233, 0.06);
+	border-radius: 5px;
 	transition: 0.2s;
 	user-select: none;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .keys .key span {
