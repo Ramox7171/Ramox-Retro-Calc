@@ -1,3 +1,30 @@
+// const RealizeKeys = (value){
+//     if (value === "clear") {
+//         input = "";
+//         displayInput.innerHTML = "";
+//         displayOutput.innerHTML = "";
+//     } else if (value === "backspace") {
+//         input = input.slice(0, -1);
+//         displayInput.innerHTML = CleanInput(input);
+//     } else if (value === "=") {
+//         let result = eval(PrepareInput(input));
+//         displayOutput.innerHTML = CleanOutput(result);
+//     } else if (value === "parentesis") {
+//         if (input.indexOf("(") === -1 || (input.indexOf("(") !== -1 && input.indexOf(")") !== -1 && input.lastIndexOf("(") < input.lastIndexOf(")"))) {
+//             input += "(";
+//         } else if (
+//             (input.indexOf("(") !== -1 && input.indexOf(")") === -1) || (input.indexOf("(") !== -1 && input.indexOf(")") !== -1 && input.lastIndexOf("(") > input.lastIndexOf(")"))
+//         ) {
+//             input += ")";
+//         }
+//         displayInput.innerHTML = CleanInput(input);
+//     } else {
+//         if (ValidateInput(value)) {
+//             input += value;
+//             displayInput.innerHTML = CleanInput(input);
+//         }
+//     }
+// };
 // grab keys
 
 const keys = document.querySelectorAll('.key');
@@ -11,22 +38,29 @@ function CleanInput(input) {
 	let inputArray_length = inputArray.length;
 
 	for (let i = 0; i < inputArray_length; i++) {
-		if (inputArray[i] === "*") {
-			inputArray[i] = ` <span class="operator">x</span> `;
-		} else if (inputArray[i] === "/") {
-			inputArray[i] = ` <span class="operator">÷</span> `;
-		} else if (inputArray[i] === "+") {
-			inputArray[i] = ` <span class="operator">+</span> `;
-		} else if (inputArray[i] === "-") {
-			inputArray[i] = ` <span class="operator">-</span> `;
-		} else if (inputArray[i] === "(") {
-			inputArray[i] = `<span class="parentesis">(</span>`;
-		} else if (inputArray[i] === ")") {
-			inputArray[i] = `<span class="parentesis">)</span>`;
-		} else if (inputArray[i] === "%") {
-			inputArray[i] = `<span class="percent">%</span>`;
+		switch (inputArray[i]) {
+			case "*":
+				inputArray[i] = ` <span class="operator">x</span> `;
+				break;
+			case "/":
+				inputArray[i] = ` <span class="operator">÷</span> `;
+				break;
+			case "+":
+				inputArray[i] = ` <span class="operator">+</span> `;
+				break;
+			case "-":
+				inputArray[i] = ` <span class="operator">-</span> `;
+				break;
+			case "(":
+				inputArray[i] = `<span class="parentesis">(</span>`;
+				break;
+			case ")":
+				inputArray[i] = `<span class="parentesis">)</span>`;
+				break;
+			case "%":
+				inputArray[i] = `<span class="percent">%</span>`;
+				break;
 		}
-		
 	}
 
 
@@ -93,47 +127,34 @@ for (let key of keys) {
 	const value = key.dataset.key;
 
 	key.addEventListener('click', () => {
-		if (value === "clear") {
-			input = "";
-			displayInput.innerHTML = "";
-			displayOutput.innerHTML = "";
-		} else if (value === "backspace") {
-			input = input.slice(0, -1);
-			displayInput.innerHTML = CleanInput(input);
-		} else if (value === "=") {
-			let result = eval(PrepareInput(input));
-
-			displayOutput.innerHTML = CleanOutput(result);
-
-
-		} else if (value === "parentesis") {
-
-
-
-
-			// if there are no open paretesis OR there are parentesis AND there is closing parentesis AND open parentesis is less than last parentesis in index then write open parentesis
-
-			if (input.indexOf("(") === -1 || input.indexOf("(") != -1 && input.indexOf(")") != -1 && input.lastIndexOf("(") < input.lastIndexOf(")"))
-			 {
-				input += "(";
-
-
-			// else if there are open parentesis AND no closed parentesis OR there are open parentesis AND there are closed parentesis AND open parentesis are not;ast om
-
-			} else if (
-				input.indexOf("(") != -1 && input.indexOf(")") === -1 || input.indexOf("(") != -1 && input.indexOf(")") != -1 && input.lastIndexOf("(") > input.lastIndexOf(")")) {
-
-				input += ")";
-			}
-
-			displayInput.innerHTML = CleanInput(input);
-		} else {
-			if (ValidateInput(value)) {
-				input += value;
+		switch (value) {
+			case "clear":
+				input = "";
+				displayInput.innerHTML = "";
+				displayOutput.innerHTML = "";
+				break;
+			case "backspace":
+				input = input.slice(0, -1);
 				displayInput.innerHTML = CleanInput(input);
-			}
+				break;
+			case "=":
+				let result = eval(PrepareInput(input));
+				displayOutput.innerHTML = CleanOutput(result);
+				break;
+			case "parentesis":
+				if (input.indexOf("(") === -1 || (input.indexOf("(") !== -1 && input.indexOf(")") !== -1 && input.lastIndexOf("(") < input.lastIndexOf(")"))) {
+					input += "(";
+				} else if ((input.indexOf("(") !== -1 && input.indexOf(")") === -1) || (input.indexOf("(") !== -1 && input.indexOf(")") !== -1 && input.lastIndexOf("(") > input.lastIndexOf(")"))) {
+					input += ")";
+				}
+				displayInput.innerHTML = CleanInput(input);
+				break;
+			default:
+				if (ValidateInput(value)) {
+					input += value;
+					displayInput.innerHTML = CleanInput(input);
+				}
 		}
-	})
+	});
+
 }
-
-
