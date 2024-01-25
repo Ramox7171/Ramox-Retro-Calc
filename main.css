@@ -22,7 +22,7 @@
 	min-height: 640px;
 	display: flex;
 	flex-direction: column;
-	border-radius: 1.5rem;
+	border-radius: 20px;
 	overflow: hidden;
 }
 
