@@ -61,7 +61,7 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	color: black;
+	color: #3C412C;
 	text-align: right;
 	flex: 1 1 0%;
 }
@@ -70,7 +70,7 @@
 	border: 5px solid;
 	border-radius: 20px;
 	padding-bottom: 20px;
-    background-color: #0ff;
+    background-color: #A8C64E;
     min-height: 200px; 
 	display: flex;
 	flex-direction: column;
@@ -83,7 +83,7 @@
 
 .display .input {
 	width: 100%;
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: 700;
 	margin-bottom: 10px;
 	padding-right: 20px;
@@ -91,7 +91,7 @@
 }
 
 .display .output {
-	font-size: 30px;
+	font-size: 60px;
 	font-weight: 700;
 	width: 100%;
 	white-space: nowrap;
