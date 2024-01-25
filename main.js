@@ -33,7 +33,7 @@ function CleanInput(input) {
 	return inputArray.join("");
 }
 
-// Out of array 
+// Out of Array 
 function CleanOutput (output) {
 	let outputString = output.toString();
 	let decimal = outputString.split(".")[1];
@@ -47,7 +47,7 @@ function CleanOutput (output) {
 		}
 	}
 
-//when decimal 
+//When Decimal 
 	if (decimal) {
 		outputArray.push(".");
 		outputArray.push(decimal);
@@ -55,7 +55,7 @@ function CleanOutput (output) {
 
 	return outputArray.join("");
 }
-//check input
+//Vailidate Input
 function ValidateInput (value) {
 	let lastInput = input.slice(-1);
 	let operators = ["+", "-", "*", "/"];
@@ -113,7 +113,8 @@ for (let key of keys) {
 
 			// if there are no open paretesis OR there are parentesis AND there is closing parentesis AND open parentesis is less than last parentesis in index then write open parentesis
 
-			if (input.indexOf("(") === -1 || input.indexOf("(") != -1 && input.indexOf(")") != -1 && input.lastIndexOf("(") < input.lastIndexOf(")")) {
+			if (input.indexOf("(") === -1 || input.indexOf("(") != -1 && input.indexOf(")") != -1 && input.lastIndexOf("(") < input.lastIndexOf(")"))
+			 {
 				input += "(";
 
 
@@ -121,6 +122,7 @@ for (let key of keys) {
 
 			} else if (
 				input.indexOf("(") != -1 && input.indexOf(")") === -1 || input.indexOf("(") != -1 && input.indexOf(")") != -1 && input.lastIndexOf("(") > input.lastIndexOf(")")) {
+					
 				input += ")";
 			}
 
