@@ -6,7 +6,7 @@ const displayInput = document.querySelector('.display .input');
 const displayOutput = document.querySelector('.display .output');
 
 
-// Putting in Array 
+// Putting in Array Input
 function CleanInput(input) {
 	let inputArray = input.split("");
 	let inputArray_length = inputArray.length;
