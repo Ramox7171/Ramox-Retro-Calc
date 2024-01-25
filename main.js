@@ -1,30 +1,4 @@
-// const RealizeKeys = (value){
-//     if (value === "clear") {
-//         input = "";
-//         displayInput.innerHTML = "";
-//         displayOutput.innerHTML = "";
-//     } else if (value === "backspace") {
-//         input = input.slice(0, -1);
-//         displayInput.innerHTML = CleanInput(input);
-//     } else if (value === "=") {
-//         let result = eval(PrepareInput(input));
-//         displayOutput.innerHTML = CleanOutput(result);
-//     } else if (value === "parentesis") {
-//         if (input.indexOf("(") === -1 || (input.indexOf("(") !== -1 && input.indexOf(")") !== -1 && input.lastIndexOf("(") < input.lastIndexOf(")"))) {
-//             input += "(";
-//         } else if (
-//             (input.indexOf("(") !== -1 && input.indexOf(")") === -1) || (input.indexOf("(") !== -1 && input.indexOf(")") !== -1 && input.lastIndexOf("(") > input.lastIndexOf(")"))
-//         ) {
-//             input += ")";
-//         }
-//         displayInput.innerHTML = CleanInput(input);
-//     } else {
-//         if (ValidateInput(value)) {
-//             input += value;
-//             displayInput.innerHTML = CleanInput(input);
-//         }
-//     }
-// };
+
 // grab keys
 
 const keys = document.querySelectorAll('.key');
@@ -90,23 +64,18 @@ function CleanOutput (output) {
 	return outputArray.join("");
 }
 //Vailidate Input
-function ValidateInput (value) {
-	let lastInput = input.slice(-1);
-	let operators = ["+", "-", "*", "/"];
+function ValidateInput(value) {
+    let lastInput = input.slice(-1);
+    let operators = ["+", "-", "*", "/"];
 
-	if (value === "." && lastInput === ".") {
-		return false;
-	}
-
-	if (operators.includes(value)) {
-		if (operators.includes(lastInput)) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-
-	return true;
+    switch (true) {
+        case value === "." && lastInput === ".":
+            return false;
+        case operators.includes(value):
+            return operators.includes(lastInput) ? false : true;
+        default:
+            return true;
+    }
 }
 
 function PrepareInput (input) {
