@@ -1,6 +1,7 @@
 #Ramox Retro Calculator 
 
-[Retro Calculator]![image](https://github.com/user-attachments/assets/01724c13-6636-43c3-80b6-3a4ad6bb623f)
+[Retro Calculator]![image](https://github.com/user-attachments/assets/eb9c1b6c-57ee-463d-b9b6-30b9246348f4)
+
 
 
 Welcome to the Retro Calculator project! This is a web-based calculator with a delightful retro design reminiscent of old-school displays. It features animated buttons and a stylish interface to make calculations enjoyable.
