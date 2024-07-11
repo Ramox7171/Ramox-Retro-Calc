@@ -1,6 +1,6 @@
 #Ramox Retro Calculator 
 
-[Retro Calculator]![image](https://github.com/user-attachments/assets/eb9c1b6c-57ee-463d-b9b6-30b9246348f4)
+![image](https://github.com/user-attachments/assets/eb9c1b6c-57ee-463d-b9b6-30b9246348f4)
 
 
 
