@@ -41,7 +41,7 @@ To run this project locally, follow these steps:
     ```
 2. Navigate to the project directory:
     ```bash
-    cd retro-calculator
+    cd ramox-retro-calc
     ```
 3. Open `index.html` in your preferred web browser.
 
