@@ -5,6 +5,8 @@
 
 Welcome to the Retro Calculator project! This is a web-based calculator with a delightful retro design reminiscent of old-school displays. It features animated buttons and a stylish interface to make calculations enjoyable.
 
+**Note:** This project was created at the very beginning of my journey with JavaScript.
+
 ## Table of Contents
 
 - [Features](#features)
