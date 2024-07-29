@@ -55,7 +55,7 @@ To run this project locally, follow these steps:
 
 - **HTML5**: For the basic structure of the calculator.
 - **CSS3**: For styling and animations.
-- **JavaScript**: For the functiona
+- **JavaScript**: For the functional
 
 ## Contributing
 
