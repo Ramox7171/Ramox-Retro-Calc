@@ -29,7 +29,7 @@ Welcome to the Retro Calculator project! This is a web-based calculator with a d
 
 ## Demo
 
-Check out the live demo [here](link_to_demo).
+Check out the live demo [here](https://ramox-retro-calc.vercel.app/).
 
 ## Installation
 
